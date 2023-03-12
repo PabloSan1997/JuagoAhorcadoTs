@@ -1,29 +1,32 @@
 import React from 'react'
 import { useContextos } from '../context/context'
-
+type todos = {
+    pal:string,
+    estado:boolean
+}[];
 type Contexto = {
-    palabras:string
+    todo:todos
 }
 interface pCajas{
-    letra:string
+    letra:string,
+    estado:boolean
 }
 function Respuesta():JSX.Element {
-    const {palabras}=useContextos() as Contexto;
-    const arreglo = palabras.split('');
+    const {todo}=useContextos() as Contexto;
     let i=0;
   return (
     <div className="respuesta">
-        {arreglo.map(elemento=>
-            (<Cajas key={i++} letra={elemento}/>)
+        {todo.map(elemento=>
+            (<Cajas key={i++} letra={elemento.pal} estado={elemento.estado}/>)
             )}
     </div>
   )
 }
 
-function Cajas({letra}:pCajas):JSX.Element{
+function Cajas({letra, estado}:pCajas):JSX.Element{
     return (
         <div className="cajas">
-            <p className="letra nel">{letra}</p>
+            <p className={!estado?"letra nel":"letra"}>{letra}</p>
         </div>
     );
 }

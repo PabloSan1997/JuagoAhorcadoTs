@@ -8,13 +8,33 @@ type props={
 
 const Contexto = React.createContext({});
 function ProvedorContexto({children}:props){
-    const {palabras, setNueva}=usePalabres();
+    const {palabras, setNueva, setTodo, todo}=usePalabres();
+    const [contar, setContar]=React.useState<boolean>(false);
+    const [matar, setMatar]=React.useState<number>(0);
+    const [error, setError]=React.useState<number>(0);
+
+    React.useEffect(
+        ()=>{
+            let ver:number = matar;
+            if(contar){
+                setMatar(ver+1);
+            }
+        }
+        ,[error]);
+        console.log(matar, error, contar);
     return (
         <Contexto.Provider
         value={
             {
                 palabras,
-                setNueva
+                setNueva,
+                setTodo,
+                todo,
+                contar,
+                setContar,
+                setError,
+                setMatar,
+                matar
             }
         }
         >
