@@ -3,7 +3,7 @@ import React from 'react'
 
 function Mensajes() {
     const opciones = [
-        "Iniciar",
+        "Empecemos",
         `Te quedan n intentos`,
         "Ya case se muere",
         "Se murio :(",

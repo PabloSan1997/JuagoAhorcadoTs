@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './App.css'
+import './estilos/App.css'
 import { Entrada } from './componentes/Entrada'
 import { Header } from './componentes/Header'
 import { Mensajes } from './componentes/Mensajes'
@@ -10,11 +10,13 @@ import { Muneco } from './muneco/Muneco'
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <Mensajes/>
-      <Muneco/>
-      <Respuesta/>
-      <Entrada/>
+      <Header />
+      <Mensajes />
+      <Muneco />
+      <div className="interaccion">
+        <Respuesta />
+        <Entrada />
+      </div>
     </div>
   )
 }

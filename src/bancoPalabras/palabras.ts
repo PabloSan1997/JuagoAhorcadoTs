@@ -1,6 +1,6 @@
 
 import React from 'react'
-const entrada: string = "telefono mango fruta perro gato avion pendejo komanche ded garbanzo desodorante";
+const entrada: string = "telefono mango fruta perro gato avion pendejo komanche ded garbanzo Chihiahia";
 
 const palabra: string[] = entrada.split(' ');
 

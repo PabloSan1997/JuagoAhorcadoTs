@@ -23,7 +23,7 @@ function Respuesta():JSX.Element {
 function Cajas({letra}:pCajas):JSX.Element{
     return (
         <div className="cajas">
-            <p className="letra">{letra}</p>
+            <p className="letra nel">{letra}</p>
         </div>
     );
 }

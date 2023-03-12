@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+body {
+  background: rgb(196, 248, 217);
+}
+
+.App {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% 20% 30% 25%;
+}
+.App .boton {
+  font-size: 1.5rem;
+  padding: 5px;
+  cursor: pointer;
+  border: 3px outset rgb(46, 46, 73);
+  border-radius: 10px;
+  background: rgb(202, 202, 235);
+  color: rgb(11, 2, 37);
+}
+.App .boton:hover {
+  background: rgb(153, 153, 204);
+}
+.App .boton:active {
+  border: 3px inset rgb(46, 46, 73);
+}
+.App .titulo {
+  background: rgb(1, 1, 17);
+  grid-column-start: 1;
+  grid-column-end: 5;
+  height: 100px;
+  display: flex;
+}
+.App .titulo h1 {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 3rem;
+  color: white;
+  margin: auto auto auto 2%;
+}
+.App .titulo .boton {
+  margin: auto 5% auto auto;
+}
+.App .mensajes {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  height: 90px;
+  display: flex;
+}
+.App .mensajes p {
+  margin: auto auto auto 10%;
+  font-size: 3rem;
+  text-decoration: underline;
+}
+.App .interaccion {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+.App .interaccion .entrada {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.App .interaccion .entrada label {
+  margin: 1% auto 0 30%;
+  color: rgb(4, 4, 61);
+  font-size: 1.5rem;
+}
+.App .interaccion .entrada #entrada {
+  margin: 5px auto 0 30%;
+  font-size: 1.5rem;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px inset rgb(160, 160, 240);
+  background: rgb(209, 209, 250);
+}
+.App .interaccion .entrada .boton {
+  margin: 20px auto auto auto;
+}
+.App .interaccion .respuesta {
+  display: flex;
+  height: 50%;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto auto auto 0;
+}
+.App .interaccion .respuesta .cajas {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 35.6px;
+  min-width: 50px;
+  padding: 0px 10px;
+  margin: auto 2px;
+  border-radius: 10px;
+  border: 2px solid rgb(3, 3, 36);
+  display: flex;
+  background: rgb(170, 207, 255);
+}
+.App .interaccion .respuesta .cajas p {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: -10px auto auto auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.App .interaccion .respuesta .cajas p.nel {
+  display: none;
+}
+.App .contenedorImagen {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  height: 450px;
+  overflow: hidden;
+}
+.App .contenedorImagen img {
+  height: 100%;
+  margin-left: 30%;
+}/*# sourceMappingURL=App.css.map */
